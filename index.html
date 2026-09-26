@@ -60,8 +60,8 @@
               class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span
               class="text-primary font-medium tracking-normal">LIVE MCX / TN SPOT</span></div>
           <div class="opacity-0">
-          <div class="flex items-center gap-space-xs shrink-0"><span class="text-outline">24K 999:</span><span
-              class="text-on-surface font-medium">₹7,185/g</span></div>
+            <div class="flex items-center gap-space-xs shrink-0"><span class="text-outline">24K 999:</span><span
+                class="text-on-surface font-medium">₹7,185/g</span></div>
           </div>
           <div class="hidden sm:flex items-center gap-space-xs shrink-0"><span class="text-outline">22K 916:</span><span
               class="text-on-surface font-medium">₹6,585/g</span></div>
@@ -587,7 +587,7 @@
       </script>
     </div>
   </main>
-    <!-- Frequently Asked Questions -->
+  <!-- Frequently Asked Questions -->
   <section class="w-full bg-surface-container-lowest border-t border-primary-container/20 py-space-2xl text-on-surface">
     <div class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
       <div class="flex flex-col items-center text-center space-y-space-sm mb-space-2xl"><span
@@ -612,7 +612,8 @@
           </summary>
           <div
             class="faq-content pt-space-md text-on-surface-variant font-body-sm text-body-sm leading-relaxed font-light border-t border-outline-variant/20 mt-space-md">
-            <p class="">Gold prices change daily based on the global market. We check the live rate at the time of your visit so you always get an accurate quote.</p>
+            <p class="">Gold prices change daily based on the global market. We check the live rate at the time of your
+              visit so you always get an accurate quote.</p>
           </div>
         </details>
         <details
@@ -628,7 +629,8 @@
           </summary>
           <div
             class="faq-content pt-space-md text-on-surface-variant font-body-sm text-body-sm leading-relaxed font-light border-t border-outline-variant/20 mt-space-md">
-            <p class="">Yes, we test your gold using acid tests, electronic testers, or XRF machines right in front of you, so you can see exactly how we arrive at our offer.</p>
+            <p class="">Yes, we test your gold using acid tests, electronic testers, or XRF machines right in front of
+              you, so you can see exactly how we arrive at our offer.</p>
           </div>
         </details>
         <details
@@ -644,7 +646,8 @@
           </summary>
           <div
             class="faq-content pt-space-md text-on-surface-variant font-body-sm text-body-sm leading-relaxed font-light border-t border-outline-variant/20 mt-space-md">
-            <p class="">A valid government-issued photo ID (like a driver's license or passport). This is a legal requirement for buying precious metals..</p>
+            <p class="">A valid government-issued photo ID (like a driver's license or passport). This is a legal
+              requirement for buying precious metals..</p>
           </div>
         </details>
         <details
@@ -660,7 +663,8 @@
           </summary>
           <div
             class="faq-content pt-space-md text-on-surface-variant font-body-sm text-body-sm leading-relaxed font-light border-t border-outline-variant/20 mt-space-md">
-            <p class="">We pay for the gold itself; stones are typically removed or valued separately if they have worth.</p>
+            <p class="">We pay for the gold itself; stones are typically removed or valued separately if they have
+              worth.</p>
           </div>
         </details>
         <details
@@ -676,12 +680,200 @@
           </summary>
           <div
             class="faq-content pt-space-md text-on-surface-variant font-body-sm text-body-sm leading-relaxed font-light border-t border-outline-variant/20 mt-space-md">
-            <p class="">Yes, we buy gold jewelry of all kinds — rings, necklaces, bracelets, earrings, pendants, and chains — in any karat. We also accept broken or damaged pieces, since we value them by their gold content, not their condition.</p>
+            <p class="">Yes, we buy gold jewelry of all kinds — rings, necklaces, bracelets, earrings, pendants, and
+              chains — in any karat. We also accept broken or damaged pieces, since we value them by their gold content,
+              not their condition.</p>
           </div>
         </details>
       </div>
     </div>
   </section>
+  <!-- Form -->
+  <!-- Form Body -->
+  <form class="flex flex-col space-y-space-lg" id="valuationEnquiryForm"
+    onsubmit="event.preventDefault(); handleSimplifiedQuerySubmit();">
+    <!-- 1. Phone Number -->
+    <div class="flex flex-col space-y-space-xs">
+      <label
+        class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-stone-700 font-semibold flex items-center justify-between"
+        for="contactPhone">
+        <span class="">Phone Number</span>
+        <span class="text-primary-container font-bold text-[10px]">* Required</span>
+      </label>
+      <div
+        class="flex bg-stone-50 transition-all border border-stone-300 focus-within:border-primary-container focus-within:bg-white">
+        <div
+          class="flex items-center gap-1.5 px-3.5 py-3.5 bg-stone-100 text-stone-700 font-label-md text-label-md uppercase tracking-wider select-none shrink-0 border-r border-stone-300">
+          <span class="text-[13px] font-medium">🇮🇳 +91</span>
+        </div>
+        <input
+          class="w-full bg-transparent text-stone-900 font-body-md text-body-md px-space-md py-3.5 focus:outline-none placeholder:text-stone-400"
+          id="contactPhone" maxlength="10" name="contactPhone" pattern="[0-9]{10}" placeholder="98400 12345" required=""
+          type="tel">
+        <div class="flex items-center pr-3.5 text-stone-400 pointer-events-none">
+          <span class="material-symbols-outlined text-[18px]">call</span>
+        </div>
+      </div>
+      <span class="font-body-sm text-[11px] text-stone-500 pt-0.5">We will connect with you immediately regarding your
+        request.</span>
+    </div>
+
+    <!-- 2. Full Name -->
+    <div class="flex flex-col space-y-space-xs">
+      <label
+        class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-stone-700 font-semibold flex items-center justify-between"
+        for="fullName">
+        <span class="">Name</span>
+        <span class="text-primary-container font-bold text-[10px]">* Required</span>
+      </label>
+      <div class="relative">
+        <input
+          class="w-full bg-stone-50 text-stone-900 font-body-md text-body-md px-space-md py-3.5 border border-stone-300 focus:border-primary-container focus:outline-none focus:bg-white transition-all placeholder:text-stone-400"
+          id="fullName" name="fullName" placeholder="Full Name" required="" type="text">
+        <div class="absolute right-3.5 top-1/2 -translate-y-1/2 text-stone-400 pointer-events-none">
+          <span class="material-symbols-outlined text-[18px]">person</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. What's your query dropdown -->
+    <div class="flex flex-col space-y-space-xs">
+      <label
+        class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-stone-700 font-semibold flex items-center justify-between"
+        for="queryType">
+        <span class="">What's your query</span>
+        <span class="text-primary-container font-bold text-[10px]">* Required</span>
+      </label>
+      <div class="relative">
+        <select
+          class="w-full bg-stone-50 text-stone-900 font-body-md text-body-md px-space-md py-3.5 appearance-none border border-stone-300 focus:border-primary-container focus:outline-none focus:bg-white transition-all cursor-pointer"
+          id="queryType" name="queryType" onchange="handleQueryChange(this.value)" required="">
+          <option class="text-stone-400 bg-white" disabled="" selected="" value="">Select your query</option>
+          <option class="text-stone-900 bg-white" value="Sell Gold">Sell Gold</option>
+          <option class="text-stone-900 bg-white" value="Buy Gold">Buy Gold</option>
+          <option class="text-stone-900 bg-white" value="Others">Others</option>
+        </select>
+        <div class="absolute right-3.5 top-1/2 -translate-y-1/2 text-primary-container pointer-events-none">
+          <span class="material-symbols-outlined text-[20px]">expand_more</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Please specify your query -->
+    <div class="flex flex-col space-y-space-xs">
+      <label
+        class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-stone-700 font-semibold flex items-center justify-between"
+        for="querySpecification">
+        <span class="">Please specify your query</span>
+        <span class="text-stone-400 text-[11px] font-medium" id="specifyHint">Enabled for "Others"</span>
+      </label>
+      <textarea
+        class="w-full bg-stone-100 text-stone-400 font-body-md text-body-md px-space-md py-3 border border-stone-300 focus:border-primary-container focus:outline-none transition-all placeholder:text-stone-400 resize-none cursor-not-allowed border-dashed disabled:bg-stone-100 disabled:text-stone-400 disabled:cursor-not-allowed"
+        disabled="" id="querySpecification" name="querySpecification" placeholder="Please describe your query..."
+        rows="3"></textarea>
+    </div>
+
+    <!-- 5. Submit Button and Security Notice -->
+    <div class="pt-space-sm flex flex-col space-y-space-md">
+      <button
+        class="w-full py-4 px-space-lg bg-primary hover:bg-primary-fixed text-on-primary font-label-md text-label-md uppercase tracking-[0.2em] font-semibold transition-all duration-300 flex items-center justify-center gap-space-sm shadow-lg hover:shadow-primary/20 active:translate-y-0.5"
+        id="submitBtn" type="submit">
+        <span class="material-symbols-outlined text-[20px]">send</span>
+        <span class="">Submit Your Query</span>
+      </button>
+      <div
+        class="hidden p-space-md bg-stone-100 border border-primary-container/40 text-stone-800 flex items-start gap-space-sm transition-all duration-300"
+        id="formSuccessToast">
+        <span class="material-symbols-outlined text-primary-container text-[22px] shrink-0">check_circle</span>
+        <div class="flex flex-col">
+          <span class="font-label-md text-label-md font-semibold uppercase tracking-wider text-primary-container">Query
+            Submitted Successfully</span>
+          <span class="font-body-sm text-body-sm text-stone-600 pt-0.5">Our desk has received your request and an
+            officer will reach out promptly.</span>
+        </div>
+      </div>
+      <div
+        class="flex items-center justify-center gap-2 text-stone-500 font-label-sm text-label-sm uppercase tracking-widest text-[10px]">
+        <span class="material-symbols-outlined text-[15px] text-primary-container">lock_clock</span>
+        <span class="">256-Bit Encrypted • Direct Officer Concierge</span>
+      </div>
+    </div>
+  </form>
+  <script>
+    function handleQueryChange(value) {
+      var textarea = document.getElementById('querySpecification');
+      var hint = document.getElementById('specifyHint');
+      if (value === 'Others') {
+        textarea.removeAttribute('disabled');
+        textarea.required = true;
+        textarea.classList.remove('bg-stone-100', 'text-stone-400', 'cursor-not-allowed', 'border-dashed');
+        textarea.classList.add('bg-white', 'text-stone-900', 'cursor-text', 'border-solid');
+        textarea.focus();
+        if (hint) {
+          hint.textContent = '* Required for Others';
+          hint.className = 'text-primary-container text-[10px] font-bold';
+        }
+      } else {
+        textarea.setAttribute('disabled', 'true');
+        textarea.required = false;
+        textarea.value = '';
+        textarea.classList.remove('bg-white', 'text-stone-900', 'cursor-text', 'border-solid');
+        textarea.classList.add('bg-stone-100', 'text-stone-400', 'cursor-not-allowed', 'border-dashed');
+        if (hint) {
+          hint.textContent = 'Enabled for "Others"';
+          hint.className = 'text-stone-400 text-[11px] font-medium';
+        }
+      }
+    }
+    function handleSimplifiedQuerySubmit() {
+      var btn = document.getElementById('submitBtn');
+      var toast = document.getElementById('formSuccessToast');
+      var form = document.getElementById('valuationEnquiryForm');
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      btn.disabled = true;
+      btn.classList.add('opacity-80', 'cursor-not-allowed');
+      btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>Submitting Your Query...</span>';
+      setTimeout(function () {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span><span>Query Submitted</span>';
+        toast.classList.remove('hidden');
+        form.reset();
+        handleQueryChange('');
+      }, 800);
+    }
+  </script>
+  <!-- Inline Vanilla Interactive Logic -->
+  <script>
+    function handleValuationSubmit() {
+      const btn = document.getElementById('submitBtn');
+      const toast = document.getElementById('formSuccessToast');
+      const form = document.getElementById('valuationEnquiryForm');
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // UX State: Submitting
+      btn.disabled = true;
+      btn.classList.add('opacity-80', 'cursor-not-allowed');
+      btn.innerHTML = `
+        <span class="material-symbols-outlined text-[20px] animate-spin">refresh</span>
+        <span>Encrypting &amp; Dispatching Protocol...</span>
+      `;
+
+      setTimeout(function () {
+        btn.innerHTML = `
+          <span class="material-symbols-outlined text-[20px]">check</span>
+          <span>Valuation Docket Transmitted</span>
+        `;
+        toast.classList.remove('hidden');
+        form.reset();
+      }, 950);
+    }
+  </script>
   <footer
     class="w-full bg-surface-container-lowest border-t border-primary-container/20 pt-space-2xl pb-space-xl text-on-surface-variant">
     <div class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
