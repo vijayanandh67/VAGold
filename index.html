@@ -539,8 +539,8 @@
               </p>
             </div>
             <div class="relative flex flex-col sm:flex-row items-center gap-space-md shrink-0 w-full md:w-auto">
-              <a class="w-full sm:w-auto px-space-xl py-4 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-[0.14em] hover:brightness-110 transition-all text-center"
-                href="#">
+              <a ... href="#"
+                onclick="event.preventDefault(); document.getElementById('valuationModal').classList.remove('hidden');">
                 Schedule Appointment
               </a>
               <a class="w-full sm:w-auto px-space-lg py-4 bg-surface-container text-on-surface hover:text-primary font-label-md text-label-md uppercase tracking-[0.14em] flex items-center justify-center gap-space-xs transition-colors"
@@ -688,117 +688,124 @@
       </div>
     </div>
   </section>
-  <!-- Form -->
   <!-- Form Body -->
-  <form class="flex flex-col space-y-space-lg" id="valuationEnquiryForm"
-    onsubmit="event.preventDefault(); handleSimplifiedQuerySubmit();">
-    <!-- 1. Phone Number -->
-    <div class="flex flex-col space-y-space-xs">
-      <label
-        class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-stone-700 font-semibold flex items-center justify-between"
-        for="contactPhone">
-        <span class="">Phone Number</span>
-        <span class="text-primary-container font-bold text-[10px]">* Required</span>
-      </label>
-      <div
-        class="flex bg-stone-50 transition-all border border-stone-300 focus-within:border-primary-container focus-within:bg-white">
-        <div
-          class="flex items-center gap-1.5 px-3.5 py-3.5 bg-stone-100 text-stone-700 font-label-md text-label-md uppercase tracking-wider select-none shrink-0 border-r border-stone-300">
-          <span class="text-[13px] font-medium">🇮🇳 +91</span>
+  <div id="valuationModal" class="hidden fixed inset-0 z-[60] bg-black/60 flex items-center justify-center p-4">
+    <div class="bg-white max-w-md w-full p-space-xl relative">
+      <button type="button" onclick="document.getElementById('valuationModal').classList.add('hidden')"
+        class="absolute top-3 right-3">✕</button>
+      <form class="flex flex-col space-y-space-lg" id="valuationEnquiryForm"
+        onsubmit="event.preventDefault(); handleSimplifiedQuerySubmit();">
+        <!-- 1. Phone Number -->
+        <div class="flex flex-col space-y-space-xs">
+          <label
+            class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-stone-700 font-semibold flex items-center justify-between"
+            for="contactPhone">
+            <span class="">Phone Number</span>
+            <span class="text-primary-container font-bold text-[10px]">* Required</span>
+          </label>
+          <div
+            class="flex bg-stone-50 transition-all border border-stone-300 focus-within:border-primary-container focus-within:bg-white">
+            <div
+              class="flex items-center gap-1.5 px-3.5 py-3.5 bg-stone-100 text-stone-700 font-label-md text-label-md uppercase tracking-wider select-none shrink-0 border-r border-stone-300">
+              <span class="text-[13px] font-medium">🇮🇳 +91</span>
+            </div>
+            <input
+              class="w-full bg-transparent text-stone-900 font-body-md text-body-md px-space-md py-3.5 focus:outline-none placeholder:text-stone-400"
+              id="contactPhone" maxlength="10" name="contactPhone" pattern="[0-9]{10}" placeholder="98400 12345"
+              required="" type="tel">
+            <div class="flex items-center pr-3.5 text-stone-400 pointer-events-none">
+              <span class="material-symbols-outlined text-[18px]">call</span>
+            </div>
+          </div>
+          <span class="font-body-sm text-[11px] text-stone-500 pt-0.5">We will connect with you immediately regarding
+            your
+            request.</span>
         </div>
-        <input
-          class="w-full bg-transparent text-stone-900 font-body-md text-body-md px-space-md py-3.5 focus:outline-none placeholder:text-stone-400"
-          id="contactPhone" maxlength="10" name="contactPhone" pattern="[0-9]{10}" placeholder="98400 12345" required=""
-          type="tel">
-        <div class="flex items-center pr-3.5 text-stone-400 pointer-events-none">
-          <span class="material-symbols-outlined text-[18px]">call</span>
-        </div>
-      </div>
-      <span class="font-body-sm text-[11px] text-stone-500 pt-0.5">We will connect with you immediately regarding your
-        request.</span>
-    </div>
 
-    <!-- 2. Full Name -->
-    <div class="flex flex-col space-y-space-xs">
-      <label
-        class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-stone-700 font-semibold flex items-center justify-between"
-        for="fullName">
-        <span class="">Name</span>
-        <span class="text-primary-container font-bold text-[10px]">* Required</span>
-      </label>
-      <div class="relative">
-        <input
-          class="w-full bg-stone-50 text-stone-900 font-body-md text-body-md px-space-md py-3.5 border border-stone-300 focus:border-primary-container focus:outline-none focus:bg-white transition-all placeholder:text-stone-400"
-          id="fullName" name="fullName" placeholder="Full Name" required="" type="text">
-        <div class="absolute right-3.5 top-1/2 -translate-y-1/2 text-stone-400 pointer-events-none">
-          <span class="material-symbols-outlined text-[18px]">person</span>
+        <!-- 2. Full Name -->
+        <div class="flex flex-col space-y-space-xs">
+          <label
+            class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-stone-700 font-semibold flex items-center justify-between"
+            for="fullName">
+            <span class="">Name</span>
+            <span class="text-primary-container font-bold text-[10px]">* Required</span>
+          </label>
+          <div class="relative">
+            <input
+              class="w-full bg-stone-50 text-stone-900 font-body-md text-body-md px-space-md py-3.5 border border-stone-300 focus:border-primary-container focus:outline-none focus:bg-white transition-all placeholder:text-stone-400"
+              id="fullName" name="fullName" placeholder="Full Name" required="" type="text">
+            <div class="absolute right-3.5 top-1/2 -translate-y-1/2 text-stone-400 pointer-events-none">
+              <span class="material-symbols-outlined text-[18px]">person</span>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- 3. What's your query dropdown -->
-    <div class="flex flex-col space-y-space-xs">
-      <label
-        class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-stone-700 font-semibold flex items-center justify-between"
-        for="queryType">
-        <span class="">What's your query</span>
-        <span class="text-primary-container font-bold text-[10px]">* Required</span>
-      </label>
-      <div class="relative">
-        <select
-          class="w-full bg-stone-50 text-stone-900 font-body-md text-body-md px-space-md py-3.5 appearance-none border border-stone-300 focus:border-primary-container focus:outline-none focus:bg-white transition-all cursor-pointer"
-          id="queryType" name="queryType" onchange="handleQueryChange(this.value)" required="">
-          <option class="text-stone-400 bg-white" disabled="" selected="" value="">Select your query</option>
-          <option class="text-stone-900 bg-white" value="Sell Gold">Sell Gold</option>
-          <option class="text-stone-900 bg-white" value="Buy Gold">Buy Gold</option>
-          <option class="text-stone-900 bg-white" value="Others">Others</option>
-        </select>
-        <div class="absolute right-3.5 top-1/2 -translate-y-1/2 text-primary-container pointer-events-none">
-          <span class="material-symbols-outlined text-[20px]">expand_more</span>
+        <!-- 3. What's your query dropdown -->
+        <div class="flex flex-col space-y-space-xs">
+          <label
+            class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-stone-700 font-semibold flex items-center justify-between"
+            for="queryType">
+            <span class="">What's your query</span>
+            <span class="text-primary-container font-bold text-[10px]">* Required</span>
+          </label>
+          <div class="relative">
+            <select
+              class="w-full bg-stone-50 text-stone-900 font-body-md text-body-md px-space-md py-3.5 appearance-none border border-stone-300 focus:border-primary-container focus:outline-none focus:bg-white transition-all cursor-pointer"
+              id="queryType" name="queryType" onchange="handleQueryChange(this.value)" required="">
+              <option class="text-stone-400 bg-white" disabled="" selected="" value="">Select your query</option>
+              <option class="text-stone-900 bg-white" value="Sell Gold">Sell Gold</option>
+              <option class="text-stone-900 bg-white" value="Buy Gold">Buy Gold</option>
+              <option class="text-stone-900 bg-white" value="Others">Others</option>
+            </select>
+            <div class="absolute right-3.5 top-1/2 -translate-y-1/2 text-primary-container pointer-events-none">
+              <span class="material-symbols-outlined text-[20px]">expand_more</span>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- 4. Please specify your query -->
-    <div class="flex flex-col space-y-space-xs">
-      <label
-        class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-stone-700 font-semibold flex items-center justify-between"
-        for="querySpecification">
-        <span class="">Please specify your query</span>
-        <span class="text-stone-400 text-[11px] font-medium" id="specifyHint">Enabled for "Others"</span>
-      </label>
-      <textarea
-        class="w-full bg-stone-100 text-stone-400 font-body-md text-body-md px-space-md py-3 border border-stone-300 focus:border-primary-container focus:outline-none transition-all placeholder:text-stone-400 resize-none cursor-not-allowed border-dashed disabled:bg-stone-100 disabled:text-stone-400 disabled:cursor-not-allowed"
-        disabled="" id="querySpecification" name="querySpecification" placeholder="Please describe your query..."
-        rows="3"></textarea>
-    </div>
-
-    <!-- 5. Submit Button and Security Notice -->
-    <div class="pt-space-sm flex flex-col space-y-space-md">
-      <button
-        class="w-full py-4 px-space-lg bg-primary hover:bg-primary-fixed text-on-primary font-label-md text-label-md uppercase tracking-[0.2em] font-semibold transition-all duration-300 flex items-center justify-center gap-space-sm shadow-lg hover:shadow-primary/20 active:translate-y-0.5"
-        id="submitBtn" type="submit">
-        <span class="material-symbols-outlined text-[20px]">send</span>
-        <span class="">Submit Your Query</span>
-      </button>
-      <div
-        class="hidden p-space-md bg-stone-100 border border-primary-container/40 text-stone-800 flex items-start gap-space-sm transition-all duration-300"
-        id="formSuccessToast">
-        <span class="material-symbols-outlined text-primary-container text-[22px] shrink-0">check_circle</span>
-        <div class="flex flex-col">
-          <span class="font-label-md text-label-md font-semibold uppercase tracking-wider text-primary-container">Query
-            Submitted Successfully</span>
-          <span class="font-body-sm text-body-sm text-stone-600 pt-0.5">Our desk has received your request and an
-            officer will reach out promptly.</span>
+        <!-- 4. Please specify your query -->
+        <div class="flex flex-col space-y-space-xs">
+          <label
+            class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-stone-700 font-semibold flex items-center justify-between"
+            for="querySpecification">
+            <span class="">Please specify your query</span>
+            <span class="text-stone-400 text-[11px] font-medium" id="specifyHint">Enabled for "Others"</span>
+          </label>
+          <textarea
+            class="w-full bg-stone-100 text-stone-400 font-body-md text-body-md px-space-md py-3 border border-stone-300 focus:border-primary-container focus:outline-none transition-all placeholder:text-stone-400 resize-none cursor-not-allowed border-dashed disabled:bg-stone-100 disabled:text-stone-400 disabled:cursor-not-allowed"
+            disabled="" id="querySpecification" name="querySpecification" placeholder="Please describe your query..."
+            rows="3"></textarea>
         </div>
-      </div>
-      <div
-        class="flex items-center justify-center gap-2 text-stone-500 font-label-sm text-label-sm uppercase tracking-widest text-[10px]">
-        <span class="material-symbols-outlined text-[15px] text-primary-container">lock_clock</span>
-        <span class="">256-Bit Encrypted • Direct Officer Concierge</span>
-      </div>
+
+        <!-- 5. Submit Button and Security Notice -->
+        <div class="pt-space-sm flex flex-col space-y-space-md">
+          <button
+            class="w-full py-4 px-space-lg bg-primary hover:bg-primary-fixed text-on-primary font-label-md text-label-md uppercase tracking-[0.2em] font-semibold transition-all duration-300 flex items-center justify-center gap-space-sm shadow-lg hover:shadow-primary/20 active:translate-y-0.5"
+            id="submitBtn" type="submit">
+            <span class="material-symbols-outlined text-[20px]">send</span>
+            <span class="">Submit Your Query</span>
+          </button>
+          <div
+            class="hidden p-space-md bg-stone-100 border border-primary-container/40 text-stone-800 flex items-start gap-space-sm transition-all duration-300"
+            id="formSuccessToast">
+            <span class="material-symbols-outlined text-primary-container text-[22px] shrink-0">check_circle</span>
+            <div class="flex flex-col">
+              <span
+                class="font-label-md text-label-md font-semibold uppercase tracking-wider text-primary-container">Query
+                Submitted Successfully</span>
+              <span class="font-body-sm text-body-sm text-stone-600 pt-0.5">Our desk has received your request and an
+                officer will reach out promptly.</span>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-center gap-2 text-stone-500 font-label-sm text-label-sm uppercase tracking-widest text-[10px]">
+            <span class="material-symbols-outlined text-[15px] text-primary-container">lock_clock</span>
+            <span class="">256-Bit Encrypted • Direct Officer Concierge</span>
+          </div>
+        </div>
+      </form>
     </div>
-  </form>
+  </div>
   <script>
     function handleQueryChange(value) {
       var textarea = document.getElementById('querySpecification');
