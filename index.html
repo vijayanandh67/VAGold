@@ -1,579 +1,733 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary": "#d4c78f", "inverse-primary": "#735c00", "secondary-fixed": "#f1e3a9", "on-primary-fixed-variant": "#574500", "on-primary": "#3c2f00", "primary-fixed-dim": "#e9c349", "on-primary-container": "#554300", "surface-tint": "#e9c349", "surface": "#131313", "secondary-container": "#4f471b", "surface-dim": "#131313", "surface-container": "#201f1f", "primary-fixed": "#ffe088", "outline-variant": "#4d4635", "on-tertiary": "#412d00", "on-secondary-fixed-variant": "#4f471b", "primary-container": "#d4af37", "surface-container-highest": "#353534", "secondary-fixed-dim": "#d4c78f", "on-tertiary-fixed-variant": "#5d4201", "surface-container-low": "#1c1b1b", "on-tertiary-fixed": "#261900", "primary": "#f2ca50", "background": "#131313", "tertiary-fixed-dim": "#e9c176", "on-surface-variant": "#d0c5af", "on-secondary": "#383006", "inverse-surface": "#e5e2e1", "surface-variant": "#353534", "error-container": "#93000a", "on-primary-fixed": "#241a00", "tertiary-container": "#d3ad65", "inverse-on-surface": "#313030", "tertiary": "#f1c97d", "surface-bright": "#3a3939", "on-tertiary-container": "#5b4000", "on-secondary-container": "#c2b57f", "error": "#ffb4ab", "on-error": "#690005", "on-error-container": "#ffdad6", "on-secondary-fixed": "#211b00", "on-background": "#e5e2e1", "on-surface": "#e5e2e1", "surface-container-high": "#2a2a2a", "surface-container-lowest": "#0e0e0e", "outline": "#99907c", "tertiary-fixed": "#ffdea5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-lg": "5rem", "space-xl": "2.5rem", "gutter-lg": "2.5rem", "space-2xl": "4rem", "gutter": "1.5rem", "margin": "1.5rem", "space-md": "1rem", "margin-md": "3rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-sm": "0.5rem" }, "fontFamily": { "label-md": [ "Plus Jakarta Sans" ], "headline-lg": [ "Playfair Display" ], "title-lg": [ "Playfair Display" ], "display-lg-mobile": [ "Playfair Display" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-sm": [ "Playfair Display" ], "label-sm": [ "Plus Jakarta Sans" ], "display-lg": [ "Playfair Display" ], "body-lg": [ "Plus Jakarta Sans" ], "body-md": [ "Plus Jakarta Sans" ], "headline-lg-mobile": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "numeric-ticker": [ "Plus Jakarta Sans" ] }, "fontSize": { "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "title-lg": [ "18px", { "lineHeight": "26px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "display-lg-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" } ], "headline-sm": [ "22px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.16em", "fontWeight": "600" } ], "display-lg": [ "56px", { "lineHeight": "68px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "300" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-md": [ "28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" } ], "numeric-ticker": [ "24px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 flex flex-col bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.5)]"><div class="w-full bg-surface-container-lowest border-b border-primary-container/20"><div class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg h-10 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest"><div class="flex items-center gap-space-lg overflow-x-auto no-scrollbar py-1"><div class="flex items-center gap-space-xs shrink-0"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span class="text-primary font-medium tracking-normal">LIVE MCX / TN SPOT</span></div><div class="flex items-center gap-space-xs shrink-0"><span class="text-outline">24K 999:</span><span class="text-on-surface font-medium">₹7,185/g</span></div><div class="hidden sm:flex items-center gap-space-xs shrink-0"><span class="text-outline">22K 916:</span><span class="text-on-surface font-medium">₹6,585/g</span></div><div class="hidden md:flex items-center gap-space-xs shrink-0"><span class="text-outline">18K:</span><span class="text-on-surface font-medium">₹5,390/g</span></div><div class="hidden lg:flex items-center gap-space-xs shrink-0"><span class="text-outline">SILVER 999:</span><span class="text-on-surface font-medium">₹96.50/g</span></div></div><div class="flex items-center gap-space-lg shrink-0"><a class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors" href="https://wa.me/919840012345" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[15px] text-primary">chat</span><span class="hidden sm:inline lowercase tracking-normal font-body-sm text-body-sm font-medium">+91 98400 12345</span></a><div class="w-px h-3 bg-outline-variant hidden sm:block"></div><a class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors" href="tel:+919840012345"><span class="material-symbols-outlined text-[15px] text-primary">call</span><span class="hidden md:inline font-body-sm text-body-sm tracking-normal">Desk</span></a></div></div></div><div class="w-full border-b border-outline-variant/30"><div class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg h-20 flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="VA Gold Monogram Wordmark" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UzJ_RLA949eAMdsUdl1ykNJY3gbG-Qm_46MzMchEUXoZ-XdYsCBVJAmNMs_3xR7BTSvkvhWnjbd7qLh5f1g654YXs1icGGTdR6F7CKHPzj9pN-f4X89-w1sLbzxYb4Fc5cxxj2io10UCMAc7PrzrJkZxMWo-_V4f0yK1rlJ_X9Oohyhf-uyl9ETagopVPhwuzwXUwSwgWNZ8cyCPOMS5CBa4hA5mCDfVG2TO-1Epoe1xRYQoosvBnXecL3"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-[0.2em] text-on-surface font-medium">VA GOLD</span><span class="font-label-sm text-[9px] uppercase tracking-[0.25em] text-secondary">Bullion &amp; Exchange</span></div></div><nav class="hidden lg:flex items-center gap-space-xl" data-active-classes="text-primary border-b border-primary"><a aria-current="page" class="py-1 font-body-md transition-colors uppercase tracking-[0.14em] text-primary border-b border-primary" data-path="sell-gold" href="#">Sell Gold</a><a class="py-1 font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-[0.14em]" data-path="buy-bullion" href="#">Buy Bullion</a><a class="py-1 font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-[0.14em]" data-path="bank-pledge-release" href="#">Bank Pledge Release</a><a class="py-1 font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-[0.14em]" data-path="about" href="#">About</a></nav><div class="flex items-center gap-space-md"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-[120px] bg-surface min-h-[calc(100vh-120px)]"><div class="flex flex-col w-full">
-<!-- SECTION 1: HERO -->
-<section class="relative w-full overflow-hidden bg-surface-container-lowest">
-<!-- Subtle Radial Ambient Gold Glow -->
-<div class="pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-tr from-primary-container/10 via-primary/5 to-transparent rounded-full blur-[140px] opacity-70"></div>
-<div class="relative max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg pt-space-2xl pb-space-2xl flex flex-col items-center text-center">
-<!-- Subtitle Accreditation Badge -->
-<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 bg-surface-container-low shadow-sm">
-<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-<span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.25em]">Established in Tamil Nadu</span>
-</div>
-<!-- Monumental Headline -->
-<h1 class="mt-space-lg font-display-lg text-display-lg max-w-4xl text-on-surface tracking-tight leading-tight">
-        Tamil Nadu’s Trusted <br> <span class="bg-gradient-to-r from-primary-fixed via-primary to-secondary bg-clip-text text-transparent italic">Gold Buyer & Seller</span>
-</h1>
-<!-- Minimal Ivory Tagline -->
-<p class="mt-space-md font-body-lg text-body-lg text-on-surface-variant max-w-2xl font-light leading-relaxed">
-        Transparent spot valuations for old gold, responsible acquisition of pledged gold from banks and other institutions, and the sale of quality-assured gold coins and bars — backed by verified purity, accurate weight, and uncompromising quality standards.
-      </p>
-<!-- Minimal CTA Row -->
-<div class="mt-space-xl flex flex-col sm:flex-row items-center gap-space-md w-full sm:w-auto">
-<a class="w-full sm:w-auto px-space-xl py-3.5 bg-gradient-to-r from-secondary-fixed via-primary-container to-secondary text-on-primary font-label-md text-label-md uppercase tracking-[0.14em] shadow-lg hover:brightness-110 transition-all text-center" href="#calculator">
-          Sell Gold Instantly
-        </a>
-<a class="w-full sm:w-auto px-space-xl py-3.5 bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-[0.14em] hover:bg-surface-container-highest hover:text-primary transition-all text-center" href="#bullion-vault">
-          Buy Gold Coins
-        </a>
-</div>
-<!-- Spot-Quote Trust Guarantee Pill -->
-<div class="mt-space-2xl inline-flex items-center gap-space-sm px-space-lg py-2 bg-surface-container text-on-surface-variant font-label-sm text-label-sm tracking-wider">
-<span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
-<span>TODAY’S BUYBACK GUARANTEE: Transparency • 0% HIDDEN DEDUCTIONS</span>
-</div>
-</div>
-</section>
-<!-- SECTION 2: FOUR PILLARS (ICON CARDS) -->
-<section class="w-full bg-surface py-space-2xl">
-  <div class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg">
-
-      <!-- Pillar 1 -->
-      <div class="group relative bg-surface-container-low p-space-xl flex flex-col justify-between rounded-[32px] overflow-hidden transition-all duration-300 hover:bg-surface-container">
-
-        <div class="flex flex-col gap-space-md">
-
-          <div class="w-12 h-12 flex items-center justify-center bg-surface-container text-primary rounded-xl group-hover:bg-primary group-hover:text-on-primary transition-colors">
-            <span class="material-symbols-outlined text-[26px]">
-              balance
-            </span>
-          </div>
-
-          <div class="flex flex-col gap-space-xs">
-            <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em]">
-              LIQUIDITY
-            </span>
-
-            <h3 class="font-title-lg text-title-lg text-on-surface font-medium">
-              Cash for Gold
-            </h3>
-          </div>
-
-          <p class="font-body-md text-body-md text-on-surface-variant font-light leading-relaxed">
-            Sell your old or broken jewellery, gold coins, and bars for instant cash, with transparent valuation, verified purity, and accurate weight.
-          </p>
-
-        </div>
-
-        <div class="mt-space-lg pt-space-md flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-widest group-hover:translate-x-1 transition-transform">
-          <span>Placeholder - Initiate Release</span>
-          <span class="material-symbols-outlined text-[16px]">
-            arrow_forward
-          </span>
-        </div>
-
-      </div>
-
-
-      <!-- Pillar 2 -->
-      <div class="group relative bg-surface-container-low p-space-xl flex flex-col justify-between rounded-[32px] overflow-hidden transition-all duration-300 hover:bg-surface-container">
-
-        <div class="flex flex-col gap-space-md">
-
-          <div class="w-12 h-12 flex items-center justify-center bg-surface-container text-primary rounded-xl group-hover:bg-primary group-hover:text-on-primary transition-colors">
-            <span class="material-symbols-outlined text-[26px]">
-              toll
-            </span>
-          </div>
-
-          <div class="flex flex-col gap-space-xs">
-            <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em]">
-              REDEMPTION
-            </span>
-
-            <h3 class="font-title-lg text-title-lg text-on-surface font-medium">
-              Pledged Gold
-            </h3>
-          </div>
-
-          <p class="font-body-md text-body-md text-on-surface-variant font-light leading-relaxed">
-            Get cash against pledged gold held with banks, NBFCs, and pawn brokers through a transparent and trusted process.
-          </p>
-
-        </div>
-
-        <div class="mt-space-lg pt-space-md flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-widest group-hover:translate-x-1 transition-transform">
-          <span>Placeholder - Explore Vault</span>
-          <span class="material-symbols-outlined text-[16px]">
-            arrow_forward
-          </span>
-        </div>
-
-      </div>
-
-
-      <!-- Pillar 3 -->
-      <div class="group relative bg-surface-container-low p-space-xl flex flex-col justify-between rounded-[32px] overflow-hidden transition-all duration-300 hover:bg-surface-container">
-
-        <div class="flex flex-col gap-space-md">
-
-          <div class="w-12 h-12 flex items-center justify-center bg-surface-container text-primary rounded-xl group-hover:bg-primary group-hover:text-on-primary transition-colors">
-            <span class="material-symbols-outlined text-[26px]">
-              balance
-            </span>
-          </div>
-
-          <div class="flex flex-col gap-space-xs">
-            <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em]">
-              RECRAFT
-            </span>
-
-            <h3 class="font-title-lg text-title-lg text-on-surface font-medium">
-              Refurbished Gold Jewellery
-            </h3>
-          </div>
-
-          <p class="font-body-md text-body-md text-on-surface-variant font-light leading-relaxed">
-            Discover beautifully refurbished gold jewellery, quality-checked for verified purity and accurate weight—bringing timeless value at an attractive price.
-          </p>
-
-        </div>
-
-        <div class="mt-space-lg pt-space-md flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-widest group-hover:translate-x-1 transition-transform">
-          <span>Placeholder - Initiate Release</span>
-          <span class="material-symbols-outlined text-[16px]">
-            arrow_forward
-          </span>
-        </div>
-
-      </div>
-
-
-      <!-- Pillar 4 -->
-      <div class="group relative bg-surface-container-low p-space-xl flex flex-col justify-between rounded-[32px] overflow-hidden transition-all duration-300 hover:bg-surface-container">
-
-        <div class="flex flex-col gap-space-md">
-
-          <div class="w-12 h-12 flex items-center justify-center bg-surface-container text-primary rounded-xl group-hover:bg-primary group-hover:text-on-primary transition-colors">
-            <span class="material-symbols-outlined text-[26px]">
-              diamond
-            </span>
-          </div>
-
-          <div class="flex flex-col gap-space-xs">
-            <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em]">
-              INVESTMENT
-            </span>
-
-            <h3 class="font-title-lg text-title-lg text-on-surface font-medium">
-              Buy Gold Coins &amp; Bars
-            </h3>
-          </div>
-
-          <p class="font-body-md text-body-md text-on-surface-variant font-light leading-relaxed">
-            Start your gold investment journey with 24K and 22K gold, offering a trusted way to build and preserve value for your financial future.
-          </p>
-
-        </div>
-
-        <div class="mt-space-lg pt-space-md flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-widest group-hover:translate-x-1 transition-transform">
-          <span>Placeholder - Exchange Guide</span>
-          <span class="material-symbols-outlined text-[16px]">
-            arrow_forward
-          </span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
-<!-- SECTION 3: SELL GOLD & PLEDGE RELEASE HIGHLIGHT -->
-<section class="w-full bg-surface-container-lowest py-space-2xl" id="calculator">
-  <div class="w-full px-margin md:px-margin-md lg:px-margin-lg">
-    
-    <!-- Full Width Single Column -->
-    <div class="w-full flex flex-col gap-space-lg">
-      
-      <!-- Heading -->
-      <div class="flex flex-col gap-space-xs">
-        <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.25em]">
-          YOUR TRUSTED PARTNER FOR GOLD
-        </span>
-
-        <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
-          Your Gold, Our Expertise
-        </h2>
-      </div>
-
-      <!-- Description -->
-      <p class="font-body-lg text-body-lg text-on-surface-variant font-light leading-relaxed max-w-none">
-        VA Gold is a gold-focused business dedicated to buying, selling, and helping customers unlock the value of their gold.We offer transparent cash-for-gold services, assist customers with pledged gold redemption, and give old jewellery a new life through our gold recrafting services. From unlocking the value of existing gold to creating something new, we make every gold transaction simple, transparent, and trustworthy. We also offer quality-assured gold coins and bars for customers looking to invest in and own physical gold with confidence. We prioritize customer trust and transparency in every transaction, ensuring that your gold's value is maximized and your experience is seamless.
-      </p>
-      <!-- Features -->
-      <div class="flex flex-col gap-space-md py-space-xs">
-
-        <div class="flex items-start gap-space-sm">
-          <div class="w-5 h-5 flex items-center justify-center bg-primary text-on-primary shrink-0 mt-0.5">
-            <span class="material-symbols-outlined text-[14px]">check</span>
-          </div>
-
-          <div class="flex flex-col">
-            <span class="font-body-md text-body-md text-on-surface font-medium">
-              Visit or Enquire
-            </span>
-            <span class="font-body-sm text-body-sm text-on-surface-variant">
-              Visit our branch or call us to begin your gold valuation.
-            </span>
-          </div>
-        </div>
-
-        <div class="flex items-start gap-space-sm">
-          <div class="w-5 h-5 flex items-center justify-center bg-primary text-on-primary shrink-0 mt-0.5">
-            <span class="material-symbols-outlined text-[14px]">check</span>
-          </div>
-
-          <div class="flex flex-col">
-            <span class="font-body-md text-body-md text-on-surface font-medium">
-              Purity Testing
-            </span>
-            <span class="font-body-sm text-body-sm text-on-surface-variant">
-              Your gold is tested using an AERB-approved testing machine for accurate purity assessment.
-            </span>
-          </div>
-        </div>
-
-        <div class="flex items-start gap-space-sm">
-          <div class="w-5 h-5 flex items-center justify-center bg-primary text-on-primary shrink-0 mt-0.5">
-            <span class="material-symbols-outlined text-[14px]">check</span>
-          </div>
-
-          <div class="flex flex-col">
-            <span class="font-body-md text-body-md text-on-surface font-medium">
-              Transparent Valuation
-            </span>
-            <span class="font-body-sm text-body-sm text-on-surface-variant">
-              We provide a clear and transparent calculation based on the tested purity, weight, and prevailing gold rates.
-            </span>
-          </div>
-        </div>
-
-                <div class="flex items-start gap-space-sm">
-          <div class="w-5 h-5 flex items-center justify-center bg-primary text-on-primary shrink-0 mt-0.5">
-            <span class="material-symbols-outlined text-[14px]">check</span>
-          </div>
-
-          <div class="flex flex-col">
-            <span class="font-body-md text-body-md text-on-surface font-medium">
-              Instant Payment
-            </span>
-            <span class="font-body-sm text-body-sm text-on-surface-variant">
-              Once you approve the valuation, receive your payment instantly through cash or bank transfer.
-            </span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- CTA -->
-      <div class="pt-space-sm">
-        <a
-          class="inline-flex items-center gap-space-sm px-space-xl py-3.5 bg-surface-container text-primary font-label-md text-label-md uppercase tracking-[0.14em] hover:bg-primary hover:text-on-primary transition-all"
-          href="#"
-        >
-          <span>Book Free Valuation</span>
-          <span class="material-symbols-outlined text-[18px]">calendar_month</span>
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- SECTION 5: TRUST STRIP -->
-<section class="w-full bg-surface-container-lowest py-space-xl">
-  <div class="w-full px-margin md:px-margin-md lg:px-margin-lg">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-lg">
-
-      <!-- Lifetime Buyback -->
-      <div class="flex items-start gap-space-sm">
-        <div class="w-10 h-10 flex items-center justify-center bg-surface-container text-primary shrink-0">
-          <span class="material-symbols-outlined text-[22px]">
-            currency_exchange
-          </span>
-        </div>
-
-        <div class="flex flex-col">
-          <span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">
-            Lifetime Buyback
-          </span>
-          <span class="font-body-sm text-body-sm text-on-surface-variant font-light">
-            Transparent Repurchase at Live Market Rates
-          </span>
-        </div>
-      </div>
-
-      <!-- Zero Deductions -->
-      <div class="flex items-start gap-space-sm">
-        <div class="w-10 h-10 flex items-center justify-center bg-surface-container text-primary shrink-0">
-          <span class="material-symbols-outlined text-[22px]">
-            money_off
-          </span>
-        </div>
-
-        <div class="flex flex-col">
-          <span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">
-            Zero Deductions
-          </span>
-          <span class="font-body-sm text-body-sm text-on-surface-variant font-light">
-            There are no additional or hidden charges involved in the process.
-          </span>
-        </div>
-      </div>
-
-      <!-- Transparent Service -->
-      <div class="flex items-start gap-space-sm">
-        <div class="w-10 h-10 flex items-center justify-center bg-surface-container text-primary shrink-0">
-          <span class="material-symbols-outlined text-[22px]">
-            opacity
-          </span>
-        </div>
-
-        <div class="flex flex-col">
-          <span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">
-            Transparent Service
-          </span>
-          <span class="font-body-sm text-body-sm text-on-surface-variant font-light">
-            A clear, transparent, and customer-friendly experience.
-          </span>
-        </div>
-      </div>
-
-      <!-- Doorstep Service -->
-      <div class="flex items-start gap-space-sm">
-        <div class="w-10 h-10 flex items-center justify-center bg-surface-container text-primary shrink-0">
-          <span class="material-symbols-outlined text-[22px]">
-            door_open
-          </span>
-        </div>
-
-        <div class="flex flex-col">
-          <span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">
-            Doorstep Service
-          </span>
-          <span class="font-body-sm text-body-sm text-on-surface-variant font-light">
-            Convenient and professional service at your doorstep.
-          </span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- SECTION 6: ELEGANT CONCIERGE VALUATION CALLOUT -->
-<section class="w-full bg-surface py-space-2xl">
-<div class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
-<div class="relative bg-surface-container-low p-space-xl md:p-space-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-space-xl">
-<!-- Background Ambient Accent -->
-<div class="pointer-events-none absolute right-0 top-0 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl"></div>
-<div class="relative flex flex-col gap-space-xs max-w-2xl">
-<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-[0.25em]">
-<span class="material-symbols-outlined text-[16px] text-primary">meeting_room</span>
-<span>PERSONALISED GOLD VALUATION</span>
-</div>
-<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">
-            Want to Know What Your Gold Is Worth?
-          </h3>
-<p class="font-body-lg text-body-lg text-on-surface-variant font-light leading-relaxed">
-            Visit VA Gold for a clear and transparent valuation of your gold, with personal assistance throughout the process.
-          </p>
-</div>
-<div class="relative flex flex-col sm:flex-row items-center gap-space-md shrink-0 w-full md:w-auto">
-<a class="w-full sm:w-auto px-space-xl py-4 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-[0.14em] hover:brightness-110 transition-all text-center" href="#">
-            Schedule Appointment
-          </a>
-<a class="w-full sm:w-auto px-space-lg py-4 bg-surface-container text-on-surface hover:text-primary font-label-md text-label-md uppercase tracking-[0.14em] flex items-center justify-center gap-space-xs transition-colors" href="tel:+919840012345">
-<span class="material-symbols-outlined text-[18px]">call</span>
-<span>Call</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- CLIENT-SIDE VALUATION LOGIC -->
-<script>
-    (function initValuationCalculator() {
-      const puritySelect = document.getElementById('gold-purity-select');
-      const gramsInput = document.getElementById('gold-grams-input');
-      const valuationResult = document.getElementById('valuation-result');
-      const lockRateBtn = document.getElementById('lock-rate-btn');
-
-      function calculateValuation() {
-        if (!puritySelect || !gramsInput || !valuationResult) return;
-        const ratePerGram = parseFloat(puritySelect.value) || 6585;
-        const grams = Math.max(0, parseFloat(gramsInput.value) || 0);
-        const total = Math.round(ratePerGram * grams);
-        
-        valuationResult.textContent = '₹' + total.toLocaleString('en-IN');
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_standard" name="shell-type" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
       }
 
-      if (puritySelect) puritySelect.addEventListener('change', calculateValuation);
-      if (gramsInput) gramsInput.addEventListener('input', calculateValuation);
-
-      if (lockRateBtn) {
-        lockRateBtn.addEventListener('click', function() {
-          const originalText = lockRateBtn.textContent;
-          lockRateBtn.textContent = 'SPOT RATE LOCKED (30 MINS)';
-          lockRateBtn.classList.add('bg-secondary');
-          setTimeout(function() {
-            lockRateBtn.textContent = originalText;
-            lockRateBtn.classList.remove('bg-secondary');
-          }, 3500);
-        });
+      body {
+        overscroll-behavior: none;
       }
-    })();
-  </script>
-</div></main><footer class="w-full bg-surface-container-lowest border-t border-primary-container/20 pt-space-2xl pb-space-xl text-on-surface-variant">
-  <div class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
 
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-lg pb-space-2xl border-b border-outline-variant/30">
+      main>:first-child {
+        margin-top: 0 !important;
+      }
 
-      <!-- VA Gold Description -->
-      <div class="md:col-span-5 flex flex-col gap-space-md">
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
 
-        <div class="flex items-center gap-space-sm">
-          <img
-            alt="VA Gold Monogram Wordmark"
-            class="h-7 w-auto object-contain"
-            src="https://lh3.googleusercontent.com/aida/AEtjO1UzJ_RLA949eAMdsUdl1ykNJY3gbG-Qm_46MzMchEUXoZ-XdYsCBVJAmNMs_3xR7BTSvkvhWnjbd7qLh5f1g654YXs1icGGTdR6F7CKHPzj9pN-f4X89-w1sLbzxYb4Fc5cxxj2io10UCMAc7PrzrJkZxMWo-_V4f0yK1rlJ_X9Oohyhf-uyl9ETagopVPhwuzwXUwSwgWNZ8cyCPOMS5CBa4hA5mCDfVG2TO-1Epoe1xRYQoosvBnXecL3"
-          />
-          <span class="font-headline-sm text-headline-sm uppercase tracking-[0.18em] text-on-surface">
-            VA GOLD
-          </span>
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary": "#d4c78f", "inverse-primary": "#735c00", "secondary-fixed": "#f1e3a9", "on-primary-fixed-variant": "#574500", "on-primary": "#3c2f00", "primary-fixed-dim": "#e9c349", "on-primary-container": "#554300", "surface-tint": "#e9c349", "surface": "#131313", "secondary-container": "#4f471b", "surface-dim": "#131313", "surface-container": "#201f1f", "primary-fixed": "#ffe088", "outline-variant": "#4d4635", "on-tertiary": "#412d00", "on-secondary-fixed-variant": "#4f471b", "primary-container": "#d4af37", "surface-container-highest": "#353534", "secondary-fixed-dim": "#d4c78f", "on-tertiary-fixed-variant": "#5d4201", "surface-container-low": "#1c1b1b", "on-tertiary-fixed": "#261900", "primary": "#f2ca50", "background": "#131313", "tertiary-fixed-dim": "#e9c176", "on-surface-variant": "#d0c5af", "on-secondary": "#383006", "inverse-surface": "#e5e2e1", "surface-variant": "#353534", "error-container": "#93000a", "on-primary-fixed": "#241a00", "tertiary-container": "#d3ad65", "inverse-on-surface": "#313030", "tertiary": "#f1c97d", "surface-bright": "#3a3939", "on-tertiary-container": "#5b4000", "on-secondary-container": "#c2b57f", "error": "#ffb4ab", "on-error": "#690005", "on-error-container": "#ffdad6", "on-secondary-fixed": "#211b00", "on-background": "#e5e2e1", "on-surface": "#e5e2e1", "surface-container-high": "#2a2a2a", "surface-container-lowest": "#0e0e0e", "outline": "#99907c", "tertiary-fixed": "#ffdea5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-lg": "5rem", "space-xl": "2.5rem", "gutter-lg": "2.5rem", "space-2xl": "4rem", "gutter": "1.5rem", "margin": "1.5rem", "space-md": "1rem", "margin-md": "3rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-sm": "0.5rem" }, "fontFamily": { "label-md": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "title-lg": ["Playfair Display"], "display-lg-mobile": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "label-sm": ["Plus Jakarta Sans"], "display-lg": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "numeric-ticker": ["Plus Jakarta Sans"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "500" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.16em", "fontWeight": "600" }], "display-lg": ["56px", { "lineHeight": "68px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "300" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400" }], "numeric-ticker": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" }] } } } };</script>
+</head>
+
+<body
+  class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+  <header
+    class="fixed top-0 left-0 right-0 z-50 flex flex-col bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.5)]">
+    <div class="w-full bg-surface-container-lowest border-b border-primary-container/20">
+      <div
+        class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg h-10 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest">
+        <div class="flex items-center gap-space-lg overflow-x-auto no-scrollbar py-1">
+          <div class="flex items-center gap-space-xs shrink-0"><span
+              class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span
+              class="text-primary font-medium tracking-normal">LIVE MCX / TN SPOT</span></div>
+          <div class="flex items-center gap-space-xs shrink-0"><span class="text-outline">24K 999:</span><span
+              class="text-on-surface font-medium">₹7,185/g</span></div>
+          <div class="hidden sm:flex items-center gap-space-xs shrink-0"><span class="text-outline">22K 916:</span><span
+              class="text-on-surface font-medium">₹6,585/g</span></div>
+          <div class="hidden md:flex items-center gap-space-xs shrink-0"><span class="text-outline">18K:</span><span
+              class="text-on-surface font-medium">₹5,390/g</span></div>
+          <div class="hidden lg:flex items-center gap-space-xs shrink-0"><span class="text-outline">SILVER
+              999:</span><span class="text-on-surface font-medium">₹96.50/g</span></div>
+        </div>
+        <div class="flex items-center gap-space-lg shrink-0"><a
+            class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors"
+            href="https://wa.me/919840012345" rel="noopener noreferrer" target="_blank"><span
+              class="material-symbols-outlined text-[15px] text-primary">chat</span><span
+              class="hidden sm:inline lowercase tracking-normal font-body-sm text-body-sm font-medium">+91
+              9176764647</span></a>
+          <div class="w-px h-3 bg-outline-variant hidden sm:block"></div><a
+            class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors"
+            href="tel:+919840012345"><span class="material-symbols-outlined text-[15px] text-primary">call</span><span
+              class="hidden md:inline font-body-sm text-body-sm tracking-normal">Desk</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="w-full border-b border-outline-variant/30">
+      <div
+        class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg h-20 flex items-center justify-between">
+        <div class="flex items-center gap-space-md"><img alt="VA Gold Monogram Wordmark"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1UzJ_RLA949eAMdsUdl1ykNJY3gbG-Qm_46MzMchEUXoZ-XdYsCBVJAmNMs_3xR7BTSvkvhWnjbd7qLh5f1g654YXs1icGGTdR6F7CKHPzj9pN-f4X89-w1sLbzxYb4Fc5cxxj2io10UCMAc7PrzrJkZxMWo-_V4f0yK1rlJ_X9Oohyhf-uyl9ETagopVPhwuzwXUwSwgWNZ8cyCPOMS5CBa4hA5mCDfVG2TO-1Epoe1xRYQoosvBnXecL3" />
+          <div class="flex flex-col"><span
+              class="font-headline-sm text-headline-sm uppercase tracking-[0.2em] text-on-surface font-medium">VA
+              GOLD</span><span class="font-label-sm text-[9px] uppercase tracking-[0.25em] text-secondary">Bullion &amp;
+              Exchange</span></div>
+        </div>
+        <nav class="hidden lg:flex items-center gap-space-xl"
+          data-active-classes="text-primary border-b border-primary"><a aria-current="page"
+            class="py-1 font-body-md transition-colors uppercase tracking-[0.14em] text-primary border-b border-primary"
+            data-path="sell-gold" href="#">Sell Gold</a><a
+            class="py-1 font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-[0.14em]"
+            data-path="buy-bullion" href="#">Buy Bullion</a><a
+            class="py-1 font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-[0.14em]"
+            data-path="bank-pledge-release" href="#">Bank Pledge Release</a><a
+            class="py-1 font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-[0.14em]"
+            data-path="about" href="#">About</a></nav>
+      </div>
+    </div>
+  </header>
+  <main class="w-full pt-[120px] bg-surface min-h-[calc(100vh-120px)]">
+    <div class="flex flex-col w-full">
+      <!-- SECTION 1: HERO -->
+      <section class="relative w-full overflow-hidden bg-surface-container-lowest">
+        <!-- Subtle Radial Ambient Gold Glow -->
+        <div
+          class="pointer-events-none absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-tr from-primary-container/10 via-primary/5 to-transparent rounded-full blur-[140px] opacity-70">
+        </div>
+        <div
+          class="relative max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg pt-space-2xl pb-space-2xl flex flex-col items-center text-center">
+          <!-- Subtitle Accreditation Badge -->
+          <div class="inline-flex items-center gap-space-xs px-space-md py-1.5 bg-surface-container-low shadow-sm">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.25em]">Established in Tamil
+              Nadu</span>
+          </div>
+          <!-- Monumental Headline -->
+          <h1
+            class="mt-space-lg font-display-lg text-display-lg max-w-4xl text-on-surface tracking-tight leading-tight">
+            Tamil Nadu’s Trusted <br> <span
+              class="bg-gradient-to-r from-primary-fixed via-primary to-secondary bg-clip-text text-transparent italic">Gold
+              Buyer & Seller</span>
+          </h1>
+          <!-- Minimal Ivory Tagline -->
+          <p class="mt-space-md font-body-lg text-body-lg text-on-surface-variant max-w-2xl font-light leading-relaxed">
+            Transparent spot valuations for old gold, responsible acquisition of pledged gold from banks and other
+            institutions, and the sale of quality-assured gold coins and bars — backed by verified purity, accurate
+            weight, and uncompromising quality standards.
+          </p>
+          <!-- Minimal CTA Row -->
+          <div class="mt-space-xl flex flex-col sm:flex-row items-center gap-space-md w-full sm:w-auto">
+            <a class="w-full sm:w-auto px-space-xl py-3.5 bg-gradient-to-r from-secondary-fixed via-primary-container to-secondary text-on-primary font-label-md text-label-md uppercase tracking-[0.14em] shadow-lg hover:brightness-110 transition-all text-center"
+              href="#calculator">
+              Sell Gold Instantly
+            </a>
+            <a class="w-full sm:w-auto px-space-xl py-3.5 bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-[0.14em] hover:bg-surface-container-highest hover:text-primary transition-all text-center"
+              href="#bullion-vault">
+              Buy Gold Coins
+            </a>
+          </div>
+          <!-- Spot-Quote Trust Guarantee Pill -->
+          <div
+            class="mt-space-2xl inline-flex items-center gap-space-sm px-space-lg py-2 bg-surface-container text-on-surface-variant font-label-sm text-label-sm tracking-wider">
+            <span class="material-symbols-outlined text-primary text-[16px]"
+              style="font-variation-settings: 'FILL' 1;">verified</span>
+            <span>TODAY’S BUYBACK GUARANTEE: Transparency • 0% HIDDEN DEDUCTIONS</span>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 2: FOUR PILLARS (ICON CARDS) -->
+      <section class="w-full bg-surface py-space-2xl">
+        <div class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-lg">
+
+            <!-- Pillar 1 -->
+            <div
+              class="group relative bg-surface-container-low p-space-xl flex flex-col justify-between rounded-[32px] overflow-hidden transition-all duration-300 hover:bg-surface-container">
+
+              <div class="flex flex-col gap-space-md">
+
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-surface-container text-primary rounded-xl group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                  <span class="material-symbols-outlined text-[26px]">
+                    balance
+                  </span>
+                </div>
+
+                <div class="flex flex-col gap-space-xs">
+                  <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em]">
+                    LIQUIDITY
+                  </span>
+
+                  <h3 class="font-title-lg text-title-lg text-on-surface font-medium">
+                    Cash for Gold
+                  </h3>
+                </div>
+
+                <p class="font-body-md text-body-md text-on-surface-variant font-light leading-relaxed">
+                  Sell your old or broken jewellery, gold coins, and bars for instant cash, with transparent valuation,
+                  verified purity, and accurate weight.
+                </p>
+
+              </div>
+
+              <div
+                class="mt-space-lg pt-space-md flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-widest group-hover:translate-x-1 transition-transform">
+                <span>Placeholder - Initiate Release</span>
+                <span class="material-symbols-outlined text-[16px]">
+                  arrow_forward
+                </span>
+              </div>
+
+            </div>
+
+
+            <!-- Pillar 2 -->
+            <div
+              class="group relative bg-surface-container-low p-space-xl flex flex-col justify-between rounded-[32px] overflow-hidden transition-all duration-300 hover:bg-surface-container">
+
+              <div class="flex flex-col gap-space-md">
+
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-surface-container text-primary rounded-xl group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                  <span class="material-symbols-outlined text-[26px]">
+                    toll
+                  </span>
+                </div>
+
+                <div class="flex flex-col gap-space-xs">
+                  <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em]">
+                    REDEMPTION
+                  </span>
+
+                  <h3 class="font-title-lg text-title-lg text-on-surface font-medium">
+                    Pledged Gold
+                  </h3>
+                </div>
+
+                <p class="font-body-md text-body-md text-on-surface-variant font-light leading-relaxed">
+                  Get cash against pledged gold held with banks, NBFCs, and pawn brokers through a transparent and
+                  trusted process.
+                </p>
+
+              </div>
+
+              <div
+                class="mt-space-lg pt-space-md flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-widest group-hover:translate-x-1 transition-transform">
+                <span>Placeholder - Explore Vault</span>
+                <span class="material-symbols-outlined text-[16px]">
+                  arrow_forward
+                </span>
+              </div>
+
+            </div>
+
+
+            <!-- Pillar 3 -->
+            <div
+              class="group relative bg-surface-container-low p-space-xl flex flex-col justify-between rounded-[32px] overflow-hidden transition-all duration-300 hover:bg-surface-container">
+
+              <div class="flex flex-col gap-space-md">
+
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-surface-container text-primary rounded-xl group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                  <span class="material-symbols-outlined text-[26px]">
+                    balance
+                  </span>
+                </div>
+
+                <div class="flex flex-col gap-space-xs">
+                  <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em]">
+                    RECRAFT
+                  </span>
+
+                  <h3 class="font-title-lg text-title-lg text-on-surface font-medium">
+                    Refurbished Gold Jewellery
+                  </h3>
+                </div>
+
+                <p class="font-body-md text-body-md text-on-surface-variant font-light leading-relaxed">
+                  Discover beautifully refurbished gold jewellery, quality-checked for verified purity and accurate
+                  weight—bringing timeless value at an attractive price.
+                </p>
+
+              </div>
+
+              <div
+                class="mt-space-lg pt-space-md flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-widest group-hover:translate-x-1 transition-transform">
+                <span>Placeholder - Initiate Release</span>
+                <span class="material-symbols-outlined text-[16px]">
+                  arrow_forward
+                </span>
+              </div>
+
+            </div>
+
+
+            <!-- Pillar 4 -->
+            <div
+              class="group relative bg-surface-container-low p-space-xl flex flex-col justify-between rounded-[32px] overflow-hidden transition-all duration-300 hover:bg-surface-container">
+
+              <div class="flex flex-col gap-space-md">
+
+                <div
+                  class="w-12 h-12 flex items-center justify-center bg-surface-container text-primary rounded-xl group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                  <span class="material-symbols-outlined text-[26px]">
+                    diamond
+                  </span>
+                </div>
+
+                <div class="flex flex-col gap-space-xs">
+                  <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em]">
+                    INVESTMENT
+                  </span>
+
+                  <h3 class="font-title-lg text-title-lg text-on-surface font-medium">
+                    Buy Gold Coins &amp; Bars
+                  </h3>
+                </div>
+
+                <p class="font-body-md text-body-md text-on-surface-variant font-light leading-relaxed">
+                  Start your gold investment journey with 24K and 22K gold, offering a trusted way to build and preserve
+                  value for your financial future.
+                </p>
+
+              </div>
+
+              <div
+                class="mt-space-lg pt-space-md flex items-center gap-space-xs text-primary font-label-md text-label-md uppercase tracking-widest group-hover:translate-x-1 transition-transform">
+                <span>Placeholder - Exchange Guide</span>
+                <span class="material-symbols-outlined text-[16px]">
+                  arrow_forward
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+      <!-- SECTION 3: SELL GOLD & PLEDGE RELEASE HIGHLIGHT -->
+      <section class="w-full bg-surface-container-lowest py-space-2xl" id="calculator">
+        <div class="w-full px-margin md:px-margin-md lg:px-margin-lg">
+
+          <!-- Full Width Single Column -->
+          <div class="w-full flex flex-col gap-space-lg">
+
+            <!-- Heading -->
+            <div class="flex flex-col gap-space-xs">
+              <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.25em]">
+                YOUR TRUSTED PARTNER FOR GOLD
+              </span>
+
+              <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+                Your Gold, Our Expertise
+              </h2>
+            </div>
+
+            <!-- Description -->
+            <p class="font-body-lg text-body-lg text-on-surface-variant font-light leading-relaxed max-w-none">
+              VA Gold is a gold-focused business dedicated to buying, selling, and helping customers unlock the value of
+              their gold.We offer transparent cash-for-gold services, assist customers with pledged gold redemption, and
+              give old jewellery a new life through our gold recrafting services. From unlocking the value of existing
+              gold to creating something new, we make every gold transaction simple, transparent, and trustworthy. We
+              also offer quality-assured gold coins and bars for customers looking to invest in and own physical gold
+              with confidence. We prioritize customer trust and transparency in every transaction, ensuring that your
+              gold's value is maximized and your experience is seamless.
+            </p>
+            <!-- Features -->
+            <div class="flex flex-col gap-space-md py-space-xs">
+
+              <div class="flex items-start gap-space-sm">
+                <div class="w-5 h-5 flex items-center justify-center bg-primary text-on-primary shrink-0 mt-0.5">
+                  <span class="material-symbols-outlined text-[14px]">check</span>
+                </div>
+
+                <div class="flex flex-col">
+                  <span class="font-body-md text-body-md text-on-surface font-medium">
+                    Visit or Enquire
+                  </span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">
+                    Visit our branch or call us to begin your gold valuation.
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-space-sm">
+                <div class="w-5 h-5 flex items-center justify-center bg-primary text-on-primary shrink-0 mt-0.5">
+                  <span class="material-symbols-outlined text-[14px]">check</span>
+                </div>
+
+                <div class="flex flex-col">
+                  <span class="font-body-md text-body-md text-on-surface font-medium">
+                    Purity Testing
+                  </span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">
+                    Your gold is tested using an AERB-approved testing machine for accurate purity assessment.
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-space-sm">
+                <div class="w-5 h-5 flex items-center justify-center bg-primary text-on-primary shrink-0 mt-0.5">
+                  <span class="material-symbols-outlined text-[14px]">check</span>
+                </div>
+
+                <div class="flex flex-col">
+                  <span class="font-body-md text-body-md text-on-surface font-medium">
+                    Transparent Valuation
+                  </span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">
+                    We provide a clear and transparent calculation based on the tested purity, weight, and prevailing
+                    gold rates.
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-space-sm">
+                <div class="w-5 h-5 flex items-center justify-center bg-primary text-on-primary shrink-0 mt-0.5">
+                  <span class="material-symbols-outlined text-[14px]">check</span>
+                </div>
+
+                <div class="flex flex-col">
+                  <span class="font-body-md text-body-md text-on-surface font-medium">
+                    Instant Payment
+                  </span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">
+                    Once you approve the valuation, receive your payment instantly through cash or bank transfer.
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="pt-space-sm">
+              <a class="inline-flex items-center gap-space-sm px-space-xl py-3.5 bg-surface-container text-primary font-label-md text-label-md uppercase tracking-[0.14em] hover:bg-primary hover:text-on-primary transition-all"
+                href="#">
+                <span>Book Free Valuation</span>
+                <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 5: TRUST STRIP -->
+      <section class="w-full bg-surface-container-lowest py-space-xl">
+        <div class="w-full px-margin md:px-margin-md lg:px-margin-lg">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-lg">
+
+            <!-- Lifetime Buyback -->
+            <div class="flex items-start gap-space-sm">
+              <div class="w-10 h-10 flex items-center justify-center bg-surface-container text-primary shrink-0">
+                <span class="material-symbols-outlined text-[22px]">
+                  currency_exchange
+                </span>
+              </div>
+
+              <div class="flex flex-col">
+                <span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">
+                  Lifetime Buyback
+                </span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant font-light">
+                  Transparent Repurchase at Live Market Rates
+                </span>
+              </div>
+            </div>
+
+            <!-- Zero Deductions -->
+            <div class="flex items-start gap-space-sm">
+              <div class="w-10 h-10 flex items-center justify-center bg-surface-container text-primary shrink-0">
+                <span class="material-symbols-outlined text-[22px]">
+                  money_off
+                </span>
+              </div>
+
+              <div class="flex flex-col">
+                <span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">
+                  Zero Deductions
+                </span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant font-light">
+                  There are no additional or hidden charges involved in the process.
+                </span>
+              </div>
+            </div>
+
+            <!-- Transparent Service -->
+            <div class="flex items-start gap-space-sm">
+              <div class="w-10 h-10 flex items-center justify-center bg-surface-container text-primary shrink-0">
+                <span class="material-symbols-outlined text-[22px]">
+                  opacity
+                </span>
+              </div>
+
+              <div class="flex flex-col">
+                <span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">
+                  Transparent Service
+                </span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant font-light">
+                  A clear, transparent, and customer-friendly experience.
+                </span>
+              </div>
+            </div>
+
+            <!-- Doorstep Service -->
+            <div class="flex items-start gap-space-sm">
+              <div class="w-10 h-10 flex items-center justify-center bg-surface-container text-primary shrink-0">
+                <span class="material-symbols-outlined text-[22px]">
+                  door_open
+                </span>
+              </div>
+
+              <div class="flex flex-col">
+                <span class="font-label-md text-label-md text-on-surface uppercase tracking-wider">
+                  Doorstep Service
+                </span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant font-light">
+                  Convenient and professional service at your doorstep.
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- SECTION 6: ELEGANT CONCIERGE VALUATION CALLOUT -->
+      <section class="w-full bg-surface py-space-2xl">
+        <div class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+          <div
+            class="relative bg-surface-container-low p-space-xl md:p-space-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-space-xl">
+            <!-- Background Ambient Accent -->
+            <div
+              class="pointer-events-none absolute right-0 top-0 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl">
+            </div>
+            <div class="relative flex flex-col gap-space-xs max-w-2xl">
+              <div
+                class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-[0.25em]">
+                <span class="material-symbols-outlined text-[16px] text-primary">meeting_room</span>
+                <span>PERSONALISED GOLD VALUATION</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">
+                Want to Know What Your Gold Is Worth?
+              </h3>
+              <p class="font-body-lg text-body-lg text-on-surface-variant font-light leading-relaxed">
+                Visit VA Gold for a clear and transparent valuation of your gold, with personal assistance throughout
+                the process.
+              </p>
+            </div>
+            <div class="relative flex flex-col sm:flex-row items-center gap-space-md shrink-0 w-full md:w-auto">
+              <a class="w-full sm:w-auto px-space-xl py-4 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-[0.14em] hover:brightness-110 transition-all text-center"
+                href="#">
+                Schedule Appointment
+              </a>
+              <a class="w-full sm:w-auto px-space-lg py-4 bg-surface-container text-on-surface hover:text-primary font-label-md text-label-md uppercase tracking-[0.14em] flex items-center justify-center gap-space-xs transition-colors"
+                href="tel:+919840012345">
+                <span class="material-symbols-outlined text-[18px]">call</span>
+                <span>Call</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CLIENT-SIDE VALUATION LOGIC -->
+      <script>
+        (function initValuationCalculator() {
+          const puritySelect = document.getElementById('gold-purity-select');
+          const gramsInput = document.getElementById('gold-grams-input');
+          const valuationResult = document.getElementById('valuation-result');
+          const lockRateBtn = document.getElementById('lock-rate-btn');
+
+          function calculateValuation() {
+            if (!puritySelect || !gramsInput || !valuationResult) return;
+            const ratePerGram = parseFloat(puritySelect.value) || 6585;
+            const grams = Math.max(0, parseFloat(gramsInput.value) || 0);
+            const total = Math.round(ratePerGram * grams);
+
+            valuationResult.textContent = '₹' + total.toLocaleString('en-IN');
+          }
+
+          if (puritySelect) puritySelect.addEventListener('change', calculateValuation);
+          if (gramsInput) gramsInput.addEventListener('input', calculateValuation);
+
+          if (lockRateBtn) {
+            lockRateBtn.addEventListener('click', function () {
+              const originalText = lockRateBtn.textContent;
+              lockRateBtn.textContent = 'SPOT RATE LOCKED (30 MINS)';
+              lockRateBtn.classList.add('bg-secondary');
+              setTimeout(function () {
+                lockRateBtn.textContent = originalText;
+                lockRateBtn.classList.remove('bg-secondary');
+              }, 3500);
+            });
+          }
+        })();
+      </script>
+    </div>
+  </main>
+  <footer
+    class="w-full bg-surface-container-lowest border-t border-primary-container/20 pt-space-2xl pb-space-xl text-on-surface-variant">
+    <div class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-lg pb-space-2xl border-b border-outline-variant/30">
+
+        <!-- VA Gold Description -->
+        <div class="md:col-span-5 flex flex-col gap-space-md">
+
+          <div class="flex items-center gap-space-sm">
+            <img alt="VA Gold Monogram Wordmark" class="h-7 w-auto object-contain"
+              src="https://lh3.googleusercontent.com/aida/AEtjO1UzJ_RLA949eAMdsUdl1ykNJY3gbG-Qm_46MzMchEUXoZ-XdYsCBVJAmNMs_3xR7BTSvkvhWnjbd7qLh5f1g654YXs1icGGTdR6F7CKHPzj9pN-f4X89-w1sLbzxYb4Fc5cxxj2io10UCMAc7PrzrJkZxMWo-_V4f0yK1rlJ_X9Oohyhf-uyl9ETagopVPhwuzwXUwSwgWNZ8cyCPOMS5CBa4hA5mCDfVG2TO-1Epoe1xRYQoosvBnXecL3" />
+            <span class="font-headline-sm text-headline-sm uppercase tracking-[0.18em] text-on-surface">
+              VA GOLD
+            </span>
+          </div>
+
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-md font-light leading-relaxed">
+            Trusted gold services across Tamil Nadu, built on transparency, fair value, and customer trust. From selling
+            and redeeming gold to recrafting jewellery and investing in physical gold, we make every transaction simple
+            and seamless.
+          </p>
+
+          <div class="flex items-center gap-space-sm pt-space-xs">
+            <span
+              class="px-2.5 py-1 bg-surface-container border border-primary-container/30 text-secondary font-label-sm text-label-sm uppercase">
+              BIS Hallmarked 916
+            </span>
+          </div>
+
         </div>
 
-        <p class="font-body-md text-body-md text-on-surface-variant max-w-md font-light leading-relaxed">
-          Trusted gold services across Tamil Nadu, built on transparency, fair value, and customer trust. From selling and redeeming gold to recrafting jewellery and investing in physical gold, we make every transaction simple and seamless.
+
+        <!-- Tamil Nadu Locations -->
+        <div class="md:col-span-4 flex flex-col gap-space-sm">
+
+          <span class="font-label-md text-label-md text-primary uppercase tracking-[0.16em]">
+            Tamil Nadu Vault Centers
+          </span>
+
+          <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface">
+
+            <li class="flex items-center gap-2">
+              <span class="w-1 h-1 bg-primary rounded-full"></span>
+              <span>Chennai</span>
+            </li>
+
+            <li class="flex items-center gap-2">
+              <span class="w-1 h-1 bg-primary rounded-full"></span>
+              <span>Coimbatore</span>
+            </li>
+
+            <li class="flex items-center gap-2">
+              <span class="w-1 h-1 bg-primary rounded-full"></span>
+              <span>Madurai</span>
+            </li>
+
+            <li class="flex items-center gap-2">
+              <span class="w-1 h-1 bg-primary rounded-full"></span>
+              <span>Salem</span>
+            </li>
+
+            <li class="flex items-center gap-2">
+              <span class="w-1 h-1 bg-primary rounded-full"></span>
+              <span>Tiruchirappalli</span>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- Exchange Desk -->
+        <div class="md:col-span-3 flex flex-col gap-space-sm">
+
+          <span class="font-label-md text-label-md text-primary uppercase tracking-[0.16em]">
+            Exchange Desk
+          </span>
+
+          <div class="flex flex-col gap-2 font-body-sm text-body-sm">
+
+            <div class="flex items-center gap-2 text-on-surface">
+              <span class="material-symbols-outlined text-[16px] text-primary">
+                call
+              </span>
+              <span>+91 9176764647</span>
+            </div>
+
+            <div class="flex items-center gap-2 text-on-surface">
+              <span class="material-symbols-outlined text-[16px] text-primary">
+                mail
+              </span>
+              <span>desk@vagoldbullion.com</span>
+            </div>
+
+            <div class="flex items-start gap-2 text-outline-variant pt-2">
+              <span class="material-symbols-outlined text-[16px] text-secondary">
+                verified_user
+              </span>
+
+              <span class="text-[11px] leading-tight">
+                Fully licensed precious metal dealership under TN Gold Control &amp; Bureau of Indian Standards
+                standards.
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Bottom Footer -->
+      <div
+        class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-[11px] uppercase tracking-wider text-outline">
+
+        <p>
+          © 2025 VA Gold Bullion Exchange Pvt Ltd. All sovereign rights reserved.
         </p>
 
-        <div class="flex items-center gap-space-sm pt-space-xs">
-          <span class="px-2.5 py-1 bg-surface-container border border-primary-container/30 text-secondary font-label-sm text-label-sm uppercase">
-            BIS Hallmarked 916
-          </span>
-        </div>
+        <div class="flex items-center gap-space-lg">
+          <a class="hover:text-primary transition-colors" href="#">
+            AML Policy
+          </a>
 
-      </div>
+          <a class="hover:text-primary transition-colors" href="#">
+            Assay Methodology
+          </a>
 
+          <a class="hover:text-primary transition-colors" href="#">
+            Purity Certification
+          </a>
 
-      <!-- Tamil Nadu Locations -->
-      <div class="md:col-span-4 flex flex-col gap-space-sm">
-
-        <span class="font-label-md text-label-md text-primary uppercase tracking-[0.16em]">
-          Tamil Nadu Vault Centers
-        </span>
-
-        <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface">
-
-          <li class="flex items-center gap-2">
-            <span class="w-1 h-1 bg-primary rounded-full"></span>
-            <span>Chennai</span>
-          </li>
-
-          <li class="flex items-center gap-2">
-            <span class="w-1 h-1 bg-primary rounded-full"></span>
-            <span>Coimbatore</span>
-          </li>
-
-          <li class="flex items-center gap-2">
-            <span class="w-1 h-1 bg-primary rounded-full"></span>
-            <span>Madurai</span>
-          </li>
-
-          <li class="flex items-center gap-2">
-            <span class="w-1 h-1 bg-primary rounded-full"></span>
-            <span>Salem</span>
-          </li>
-
-          <li class="flex items-center gap-2">
-            <span class="w-1 h-1 bg-primary rounded-full"></span>
-            <span>Tiruchirappalli</span>
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <!-- Exchange Desk -->
-      <div class="md:col-span-3 flex flex-col gap-space-sm">
-
-        <span class="font-label-md text-label-md text-primary uppercase tracking-[0.16em]">
-          Exchange Desk
-        </span>
-
-        <div class="flex flex-col gap-2 font-body-sm text-body-sm">
-
-          <div class="flex items-center gap-2 text-on-surface">
-            <span class="material-symbols-outlined text-[16px] text-primary">
-              call
-            </span>
-            <span>+91 9176764647</span>
-          </div>
-
-          <div class="flex items-center gap-2 text-on-surface">
-            <span class="material-symbols-outlined text-[16px] text-primary">
-              mail
-            </span>
-            <span>desk@vagoldbullion.com</span>
-          </div>
-
-          <div class="flex items-start gap-2 text-outline-variant pt-2">
-            <span class="material-symbols-outlined text-[16px] text-secondary">
-              verified_user
-            </span>
-
-            <span class="text-[11px] leading-tight">
-              Fully licensed precious metal dealership under TN Gold Control &amp; Bureau of Indian Standards standards.
-            </span>
-          </div>
-
+          <a class="hover:text-primary transition-colors" href="#">
+            Privacy Sanctum
+          </a>
         </div>
 
       </div>
 
     </div>
+  </footer>
+</body>
 
-
-    <!-- Bottom Footer -->
-    <div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-[11px] uppercase tracking-wider text-outline">
-
-      <p>
-        © 2025 VA Gold Bullion Exchange Pvt Ltd. All sovereign rights reserved.
-      </p>
-
-      <div class="flex items-center gap-space-lg">
-        <a class="hover:text-primary transition-colors" href="#">
-          AML Policy
-        </a>
-
-        <a class="hover:text-primary transition-colors" href="#">
-          Assay Methodology
-        </a>
-
-        <a class="hover:text-primary transition-colors" href="#">
-          Purity Certification
-        </a>
-
-        <a class="hover:text-primary transition-colors" href="#">
-          Privacy Sanctum
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-</footer></body></html>
+</html>
