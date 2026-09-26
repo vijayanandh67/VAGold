@@ -121,123 +121,90 @@
 </section>
 <!-- SECTION 3: SELL GOLD & PLEDGE RELEASE HIGHLIGHT -->
 <section class="w-full bg-surface-container-lowest py-space-2xl" id="calculator">
-<div class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
-<!-- Left Column: Authority Copy -->
-<div class="lg:col-span-6 flex flex-col gap-space-lg">
-<div class="flex flex-col gap-space-xs">
-<span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.25em]">Liquidity &amp; Integrity</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Instant Cash &amp; Bank Pledge Release</h2>
-</div>
-<p class="font-body-lg text-body-lg text-on-surface-variant font-light leading-relaxed">
-            Trapped in high-interest NBFC or commercial bank gold loans? We settle your outstanding loan directly at your bank branch, safely retrieve your gold, and transfer the balance surplus straight to your account within minutes.
-          </p>
-<div class="flex flex-col gap-space-md py-space-xs">
-<div class="flex items-start gap-space-sm">
-<div class="w-5 h-5 flex items-center justify-center bg-primary text-on-primary shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[14px]">check</span>
-</div>
-<div class="flex flex-col">
-<span class="font-body-md text-body-md text-on-surface font-medium">German XRF Non-Destructive Purity Testing</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Zero acid filing or melting loss; accurate to 0.01% Karat specificity.</span>
-</div>
-</div>
-<div class="flex items-start gap-space-sm">
-<div class="w-5 h-5 flex items-center justify-center bg-primary text-on-primary shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[14px]">check</span>
-</div>
-<div class="flex flex-col">
-<span class="font-body-md text-body-md text-on-surface font-medium">On-the-spot Bank Loan Clearance</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">VA Gold loan officers accompany you directly to Muthoot, Manappuram, or nationalized banks.</span>
-</div>
-</div>
-<div class="flex items-start gap-space-sm">
-<div class="w-5 h-5 flex items-center justify-center bg-primary text-on-primary shrink-0 mt-0.5">
-<span class="material-symbols-outlined text-[14px]">check</span>
-</div>
-<div class="flex flex-col">
-<span class="font-body-md text-body-md text-on-surface font-medium">Direct NEFT/RTGS Bank Transfer in 15 Minutes</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant">Surplus credited immediately with full GST and RBI-compliant invoice receipts.</span>
-</div>
-</div>
-</div>
-<div class="pt-space-sm">
-<a class="inline-flex items-center gap-space-sm px-space-xl py-3.5 bg-surface-container text-primary font-label-md text-label-md uppercase tracking-[0.14em] hover:bg-primary hover:text-on-primary transition-all" href="#">
-<span>Book Free Valuation</span>
-<span class="material-symbols-outlined text-[18px]">calendar_month</span>
-</a>
-</div>
-</div>
-<!-- Right Column: Interactive Dark Glass Valuation Card -->
-<div class="lg:col-span-6">
-<div class="bg-surface-container-low p-space-xl md:p-space-2xl shadow-xl flex flex-col gap-space-lg relative">
-<div class="flex items-center justify-between pb-space-sm">
-<div class="flex flex-col">
-<span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em]">Estimator Studio</span>
-<span class="font-title-lg text-title-lg text-on-surface font-medium">Live Settlement Calculator</span>
-</div>
-<div class="flex items-center gap-1.5 px-2 py-1 bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-wider">
-<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-<span>Live Spot Active</span>
-</div>
-</div>
-<!-- Inputs Grid -->
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
-<div class="flex flex-col gap-1.5">
-<label class="font-label-sm text-label-sm text-outline uppercase tracking-wider" for="gold-purity-select">Purity Grade</label>
-<select class="bg-surface-container text-on-surface font-body-md text-body-md px-space-md py-3 appearance-none focus:outline-none focus:bg-surface-container-high transition-colors cursor-pointer" id="gold-purity-select">
-<option value="6585">22K (916 BIS Hallmarked) - ₹6,585/g</option>
-<option value="7185">24K (999 Pure Bullion) - ₹7,185/g</option>
-<option value="5390">18K (750 European Gold) - ₹5,390/g</option>
-</select>
-</div>
-<div class="flex flex-col gap-1.5">
-<label class="font-label-sm text-label-sm text-outline uppercase tracking-wider" for="gold-grams-input">Estimated Weight</label>
-<div class="relative flex items-center">
-<input class="w-full bg-surface-container text-on-surface font-numeric-ticker text-numeric-ticker px-space-md py-2.5 focus:outline-none focus:bg-surface-container-high transition-colors" id="gold-grams-input" max="10000" min="1" type="number" value="50"/>
-<span class="absolute right-3 font-label-sm text-label-sm text-secondary uppercase">GRAMS</span>
-</div>
-</div>
-</div>
-<!-- Pledge Offset Switch -->
-<div class="flex items-center justify-between p-space-md bg-surface-container">
-<div class="flex flex-col">
-<span class="font-body-md text-body-md text-on-surface font-medium">Bank Pledge Clearance Needed?</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant font-light">We clear the bank loan directly on your behalf</span>
-</div>
-<label class="relative inline-flex items-center cursor-pointer">
-<input class="sr-only peer" id="pledge-toggle" type="checkbox"/>
-<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-primary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-container after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
-</label>
-</div>
-<!-- Approximate Valuation Display -->
-<div class="p-space-lg bg-surface-container-high flex flex-col gap-space-xs text-center sm:text-left">
-<div class="flex flex-col sm:flex-row items-center justify-between gap-space-xs">
-<span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.2em]">Instant Approximate Valuation</span>
-<span class="font-body-sm text-body-sm text-outline">0% Wastage • Spot Assured</span>
-</div>
-<div class="font-display-lg text-display-lg font-numeric-ticker text-primary tracking-tight" id="valuation-result">
-                ₹3,29,250
-              </div>
-<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-1">
-<span>Calculated on Live Chennai Spot: 50.00g @ ₹6,585/g</span>
-<span class="text-primary font-medium">Valid for 30 mins</span>
-</div>
-</div>
-<!-- Action Row -->
-<div class="flex flex-col sm:flex-row gap-space-md">
-<button class="flex-1 py-3.5 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-[0.14em] hover:brightness-110 transition-all text-center" id="lock-rate-btn">
-                Lock In Spot Rate Now
-              </button>
-<a class="px-space-lg py-3.5 bg-surface-container text-on-surface hover:text-primary flex items-center justify-center gap-space-xs transition-colors" href="https://wa.me/919840012345" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[18px]">chat</span>
-<span class="font-label-md text-label-md uppercase tracking-widest">WhatsApp Desk</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
+  <div class="w-full px-margin md:px-margin-md lg:px-margin-lg">
+    
+    <!-- Full Width Single Column -->
+    <div class="w-full flex flex-col gap-space-lg">
+      
+      <!-- Heading -->
+      <div class="flex flex-col gap-space-xs">
+        <span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.25em]">
+          Liquidity &amp; Integrity
+        </span>
+
+        <h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Instant Cash &amp; Bank Pledge Release
+        </h2>
+      </div>
+
+      <!-- Description -->
+      <p class="font-body-lg text-body-lg text-on-surface-variant font-light leading-relaxed max-w-none">
+        Trapped in high-interest NBFC or commercial bank gold loans? We settle your outstanding loan directly at your bank branch, safely retrieve your gold, and transfer the balance surplus straight to your account within minutes.
+      </p>
+
+      <!-- Features -->
+      <div class="flex flex-col gap-space-md py-space-xs">
+
+        <div class="flex items-start gap-space-sm">
+          <div class="w-5 h-5 flex items-center justify-center bg-primary text-on-primary shrink-0 mt-0.5">
+            <span class="material-symbols-outlined text-[14px]">check</span>
+          </div>
+
+          <div class="flex flex-col">
+            <span class="font-body-md text-body-md text-on-surface font-medium">
+              German XRF Non-Destructive Purity Testing
+            </span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">
+              Zero acid filing or melting loss; accurate to 0.01% Karat specificity.
+            </span>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-space-sm">
+          <div class="w-5 h-5 flex items-center justify-center bg-primary text-on-primary shrink-0 mt-0.5">
+            <span class="material-symbols-outlined text-[14px]">check</span>
+          </div>
+
+          <div class="flex flex-col">
+            <span class="font-body-md text-body-md text-on-surface font-medium">
+              On-the-spot Bank Loan Clearance
+            </span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">
+              VA Gold loan officers accompany you directly to Muthoot, Manappuram, or nationalized banks.
+            </span>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-space-sm">
+          <div class="w-5 h-5 flex items-center justify-center bg-primary text-on-primary shrink-0 mt-0.5">
+            <span class="material-symbols-outlined text-[14px]">check</span>
+          </div>
+
+          <div class="flex flex-col">
+            <span class="font-body-md text-body-md text-on-surface font-medium">
+              Direct NEFT/RTGS Bank Transfer in 15 Minutes
+            </span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">
+              Surplus credited immediately with full GST and RBI-compliant invoice receipts.
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="pt-space-sm">
+        <a
+          class="inline-flex items-center gap-space-sm px-space-xl py-3.5 bg-surface-container text-primary font-label-md text-label-md uppercase tracking-[0.14em] hover:bg-primary hover:text-on-primary transition-all"
+          href="#"
+        >
+          <span>Book Free Valuation</span>
+          <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
 </section>
 <!-- SECTION 4: 24K GOLD COINS VAULT (4-TILE GRID) -->
 <section class="w-full bg-surface py-space-2xl" id="bullion-vault">
